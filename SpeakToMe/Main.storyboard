@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jyj-4W-BkI">
+                                <rect key="frame" x="137" y="20" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="5TX-ZC-rQF"/>
+                                </constraints>
+                                <state key="normal" title="Select Screen"/>
+                                <connections>
+                                    <action selector="selectScreenButton_Click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2GK-Vh-Ie2"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z7l-Po-ExT">
+                                <rect key="frame" x="67" y="50" width="240" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="MLR-AG-qKk"/>
+                                    <constraint firstAttribute="width" constant="240" id="QJ3-VA-hHV"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="No screen selected">
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="prE-ge-ovy">
+                                <rect key="frame" x="0.0" y="80" width="375" height="371"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7xe-MP-Nm9">
+                                <rect key="frame" x="162.5" y="587" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="h13-UR-rZ2"/>
+                                    <constraint firstAttribute="width" constant="50" id="sH4-L0-cdE"/>
+                                </constraints>
+                                <state key="normal" image=" " backgroundImage="microphone.png">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="recordButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ugn-XV-Kkw"/>
+                                </connections>
+                            </button>
+                            <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w5J-od-0eE">
+                                <rect key="frame" x="0.0" y="451" width="375" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="216" id="KXP-TM-Rv5"/>
+                                </constraints>
+                            </pickerView>
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Go ahead, I'm listening !" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="5sl-tq-EOB">
+                                <rect key="frame" x="67" y="627" width="240" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="8Hc-7T-Qgu"/>
+                                    <constraint firstAttribute="height" constant="30" id="v0a-et-5mo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="w5J-od-0eE" secondAttribute="trailing" id="3DZ-br-66E"/>
+                            <constraint firstItem="Jyj-4W-BkI" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="71u-a4-h6E"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="w5J-od-0eE" secondAttribute="bottom" id="9UT-TG-T6J"/>
+                            <constraint firstItem="Jyj-4W-BkI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bym-Fa-L2j"/>
+                            <constraint firstItem="w5J-od-0eE" firstAttribute="top" secondItem="prE-ge-ovy" secondAttribute="bottom" id="Fui-Ni-8pJ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7xe-MP-Nm9" secondAttribute="bottom" constant="30" id="H3g-64-YBa"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5sl-tq-EOB" secondAttribute="bottom" constant="10" id="Ngy-am-DTf"/>
+                            <constraint firstItem="prE-ge-ovy" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="OQc-uv-6Eu"/>
+                            <constraint firstItem="prE-ge-ovy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="P4r-Ub-aGz"/>
+                            <constraint firstItem="prE-ge-ovy" firstAttribute="top" secondItem="z7l-Po-ExT" secondAttribute="bottom" id="WMj-ql-GVI"/>
+                            <constraint firstItem="z7l-Po-ExT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WNj-XY-HV9"/>
+                            <constraint firstItem="7xe-MP-Nm9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z26-TC-tHW"/>
+                            <constraint firstItem="z7l-Po-ExT" firstAttribute="top" secondItem="Jyj-4W-BkI" secondAttribute="bottom" id="d7o-s5-c2P"/>
+                            <constraint firstItem="5sl-tq-EOB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fMC-qG-rAo"/>
+                            <constraint firstItem="w5J-od-0eE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="q8r-Zp-u7g"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pickerView" destination="w5J-od-0eE" id="65U-aB-apd"/>
+                        <outlet property="recordButton" destination="7xe-MP-Nm9" id="WtH-Dp-x5U"/>
+                        <outlet property="recordStatus" destination="5sl-tq-EOB" id="SuG-jr-e42"/>
+                        <outlet property="selectScreenButton" destination="Jyj-4W-BkI" id="DrJ-Wg-R2F"/>
+                        <outlet property="selectedScreenTextView" destination="z7l-Po-ExT" id="ySK-ea-pnJ"/>
+                        <outlet property="textView" destination="prE-ge-ovy" id="xF3-eW-DoN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-0.80000000000000004" y="-2.2488760000000001"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="microphone.png" width="256" height="256"/>
+        <image name=" " width="16" height="16"/>
+    </resources>
+</document>
